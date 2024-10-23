@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Địa chỉ</title>
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Linking Google Font Link For Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--<link rel="stylesheet" href="style2.css" />-->
+    <link rel="stylesheet" href="/assets/css/style-profile.css" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- (Optional) Use CSS or JS implementation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+        integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body>
+
+    <div class="main-content">
+        <nav>
+            <div class="nav-bar">
+                <div class="darkLight-searchBox">
+                    <!-- Đồng Hồ-->
+                    <div class="info">
+                        <div class="box-weather m-2">
+                            <img class="m-0" id="weather-icon" src="" alt="Weather Icon" style="display:none;" />
+                        </div>
+                        <div class="clock" id="time">00:00:00</div>
+                        <div class="date" id="date">Day, DD/MM/YYYY</div>
+                    </div>
+                    <div class="dark-light" id="reloadButton">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <div class="search-field">
+                            <input type="text" placeholder="Bạn muốn tìm gì?">
+                            <i class='bx bx-search'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="box-work">
+            <div class="title">
+                <h1> <b>Địa Chỉ</b> <span class="edit_text-title">Của Tôi</span>
+                    <a href="ThemDiaChi.html"><button class="float-end m-2 btn btn-primary rounded-pill"><i
+                                class="fa-solid fa-plus me-1"></i>Thêm
+                            địa chỉ mới</button></a>
+                </h1>
+            </div>
+            <hr>
+            <div class="boxs-card" id="boxes">
+                <div class="row mt-5 card p-3" id="box1">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="row">
+                            <h3><label for="" id="name1">Huyền cuti</label></h3>
+                            <h5>Số điện thoại: <label for="" id="phone1">(84+)872632653</label></h5>
+                            <h5>Địa chỉ: <label for="" id="address1">Cần thơ</label></h5>
+                            <label id="label1" class="default-label" style="width: 100px;">Mặc định</label>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary" onclick="setDefault('label1')">Đặt làm mặc định</button>
+                            <button class="btn btn-secondary ms-2" onclick="openEditModal('box1')">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5 card p-3" id="box2">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="row">
+                            <h3><label for="" id="name2">Huyền cute</label></h3>
+                            <h5>Số điện thoại: <label for="" id="phone2">(84+)293752735</label></h5>
+                            <h5>Địa chỉ: <label for="" id="address2">Cần thơ</label></h5>
+                            <label id="label2" class="highlight-label" style="width: 100px;">Mặc định</label>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary" onclick="setDefault('label2')">Đặt làm mặc định</button>
+                            <button class="btn btn-secondary ms-2" onclick="openEditModal('box2')">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5 card p-3" id="box3">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="row">
+                            <h3><label for="" id="name3">Huyền ngáo</label></h3>
+                            <h5>Số điện thoại: <label for="" id="phone3">(84+)783625485</label></h5>
+                            <h5>Địa chỉ: <label for="" id="address3">Cần thơ</label></h5>
+                            <label id="label3" class="highlight-label ms-2" style="width: 100px;">Mặc định</label>
+                        </div>
+                        <div>
+                            <button class="btn btn-primary" onclick="setDefault('label3')">Đặt làm mặc định</button>
+                            <button class="btn btn-secondary ms-2" onclick="openEditModal('box3')">Chỉnh sửa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Chỉnh sửa -->
+            <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="editModalLabel">Chỉnh sửa thông tin</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="editForm">
+                                <div class="mb-3">
+                                    <label for="editName" class="form-label">Họ tên</label>
+                                    <input type="text" class="form-control" id="editName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="editPhone" class="form-label">Số điện thoại</label>
+                                    <input type="text" class="form-control" id="editPhone" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="editAddress" class="form-label">Địa chỉ</label>
+                                    <input type="text" class="form-control" id="editAddress" required>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                            <button type="button" class="btn btn-primary" id="saveButton">Lưu thay đổi</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="mb-5 mt-5">
+        </div>
+    </div>
+    <script>
+        let currentNameId = ''; // Biến để lưu ID của tên hiện tại đang chỉnh sửa
+        let currentPhoneId = ''; // Biến để lưu ID của địa chỉ hiện tại đang chỉnh sửa
+        let currentAddressId = ''; // Biến để lưu ID của địa chỉ hiện tại đang chỉnh sửa
+        let currentBoxId = ''; // Biến để lưu ID của box hiện tại đang chỉnh sửa
+
+        function setDefault(activeLabelId) {
+            // Xóa trạng thái mặc định của tất cả các nhãn
+            const labels = ['label1', 'label2', 'label3'];
+            labels.forEach(labelId => {
+                const label = document.getElementById(labelId);
+                label.className = "highlight-label"; // Đặt trạng thái không mặc định
+            });
+
+            // Đặt trạng thái mặc định cho nhãn được nhấn
+            const activeLabel = document.getElementById(activeLabelId);
+            activeLabel.className = "default-label";
+
+            // Di chuyển box tương ứng lên đầu
+            const activeBox = document.getElementById(`box${activeLabelId.charAt(5)}`);
+            const boxesContainer = document.getElementById('boxes');
+            boxesContainer.prepend(activeBox); // Di chuyển box lên đầu danh sách
+        }
+
+        function openEditModal(boxId) {
+            currentBoxId = boxId; // Lưu ID box để cập nhật
+            const nameId = `name${boxId.charAt(3)}`;
+            const phoneId = `phone${boxId.charAt(3)}`;
+            const addressId = `address${boxId.charAt(3)}`;
+
+            // Lấy thông tin từ các nhãn
+            const name = document.getElementById(nameId).innerText;
+            const phone = document.getElementById(phoneId).innerText;
+            const address = document.getElementById(addressId).innerText;
+
+            // Điền thông tin vào modal
+            document.getElementById('editName').value = name;
+            document.getElementById('editPhone').value = phone;
+            document.getElementById('editAddress').value = address;
+
+            // Hiển thị modal
+            const modal = new bootstrap.Modal(document.getElementById('editModal'));
+            modal.show();
+        }
+
+        document.getElementById('saveButton').addEventListener('click', function () {
+            const newName = document.getElementById('editName').value;
+            const newPhone= document.getElementById('editPhone').value;
+            const newAddress = document.getElementById('editAddress').value;
+
+            // Cập nhật thông tin trong box tương ứng
+            document.getElementById(`name${currentBoxId.charAt(3)}`).innerText = newName;
+            document.getElementById(`phone${currentBoxId.charAt(3)}`).innerText = newPhone;
+            document.getElementById(`address${currentBoxId.charAt(3)}`).innerText = newAddress;
+
+            // Đóng modal
+            const modal = bootstrap.Modal.getInstance(document.getElementById('editModal'));
+            modal.hide();
+        });
+    </script>
+
+    <!--JavaScript Libraries -->
+    <script src="/assets/js/reload.js"></script>
+    <script src="/assets/js/chart.js"></script>
+    <script src="/assets/js/page.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/script-profile.js"></script>
+    <!-- =================================== -->
+
+    <!-- <script src="script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

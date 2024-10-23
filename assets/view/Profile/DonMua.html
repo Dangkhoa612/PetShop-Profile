@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đơn mua</title>
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Linking Google Font Link For Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!--<link rel="stylesheet" href="style2.css" />-->
+    <link rel="stylesheet" href="/assets/css/style-profile.css" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <!-- (Optional) Use CSS or JS implementation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+        integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body>
+
+    <div class="main-content">
+        <nav>
+            <div class="nav-bar">
+                <div class="darkLight-searchBox">
+                    <div class="info">
+                        <div class="box-weather m-2">
+                            <img class="m-0" id="weather-icon" src="" alt="Weather Icon" style="display:none;" />
+                        </div>
+                        <div class="clock" id="time">00:00:00</div>
+                        <div class="date" id="date">Day, DD/MM/YYYY</div>
+                    </div>
+                    <div class="dark-light" id="reloadButton">
+                        <i class='bx bx-moon moon'></i>
+                        <i class='bx bx-sun sun'></i>
+                    </div>
+                    <div class="searchBox">
+                        <div class="searchToggle">
+                            <i class='bx bx-x cancel'></i>
+                            <i class='bx bx-search search'></i>
+                        </div>
+                        <div class="search-field">
+                            <input type="text" placeholder="Bạn muốn tìm gì?">
+                            <i class='bx bx-search'></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="box-work">
+            <div class="title">
+                <h1> <b>Địa chỉ</b> <span class="edit_text-title">của tôi</span></h1>
+            </div>
+            <hr>
+            <div>
+                <!--=========card 1============ -->
+                <div class="row mt-5 card p-3">
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <a href="/assets/view/TrangChu.html"><button class="buttonedit-xemsp" type="button">Xem sản
+                                    phẩm</button></a>
+                            <label for="" class="text-xemsp" id="status1">Đang giao hàng</label>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <img src="/assets/images/product-3.jpg" alt="" style="width: 200px;">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <h3><label for="" id="name1">Thức ăn khô cho chó mọi giống cân nặng khỏe mạnh vị
+                                                Gà & Gạo Lứt</label></h3>
+                                        <select>
+                                            <option value="Phân loại hàng">Phân loại hàng</option>
+                                            <option value="Thức ăn">Thức ăn</option>
+                                            <option value="Phụ kiện">Phụ kiện</option>
+                                            <option value="Thuốc">Thuốc</option>
+                                        </select>
+                                        <h5 class="mt-2">X<label for="soluong">2</label></h5>
+                                        <div class="card w-50 border border-success">
+                                            <span class="text-center ps-2 pe-2 text-success">Trả hàng miễn phí 15
+                                                ngày.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="price">
+                                    <span class="float-start text-secondary">
+                                        <label for="giatiengoc" class="text-decoration-line-through">500.000VND</label>
+                                    </span>
+                                    <h4><label for="giatien" class="ms-2">350.000VND</label></h4>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="col-sm-12">
+                                <h4 class="text-xemsp fw-bold float-end me-5">Tổng tiền: <label>700.000VND</label></h4>
+                            </div>
+                            <div class="col-sm-12">
+                                <button class="button-outlineedit-xemsp float-end mt-4 ms-1" type="button">Liên hệ người
+                                    bán</button>
+                                <button class="button-outlineedit-xemsp float-end mt-4 ms-1" type="button">Yêu cầu
+                                    trả/Hoàn tiền</button>
+                                <button class="buttonedit-xemsp float-end mt-4 ms-1" id="receivedButton1"
+                                    type="button">Đã nhận hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--=========card 2============ -->
+                <div class="row mt-5 card p-3">
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <a href="/assets/view/TrangChu.html"><button class="buttonedit-xemsp" type="button">Xem sản
+                                    phẩm</button></a>
+                            <label for="" class="text-xemsp" id="status2">Đang giao hàng</label>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <img src="/assets/images/product-2.jpg" alt="" style="width: 200px;">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <h3><label for="" id="name2">Thức ăn khô cho chó mọi giống cân nặng khỏe mạnh vị
+                                                Gà & Gạo Lứt</label></h3>
+                                        <select>
+                                            <option value="Phân loại hàng">Phân loại hàng</option>
+                                            <option value="Thức ăn">Thức ăn</option>
+                                            <option value="Phụ kiện">Phụ kiện</option>
+                                            <option value="Thuốc">Thuốc</option>
+                                        </select>
+                                        <h5 class="mt-2">X<label for="soluong">2</label></h5>
+                                        <div class="card w-50 border border-success">
+                                            <span class="text-center ps-2 pe-2 text-success">Trả hàng miễn phí 15
+                                                ngày.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="price">
+                                    <span class="float-start text-secondary">
+                                        <label for="giatiengoc" class="text-decoration-line-through">500.000VND</label>
+                                    </span>
+                                    <h4><label for="giatien" class="ms-2">350.000VND</label></h4>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="col-sm-12">
+                                <h4 class="text-xemsp fw-bold float-end me-5">Tổng tiền: <label>700.000VND</label></h4>
+                            </div>
+                            <div class="col-sm-12">
+                                <button class="button-outlineedit-xemsp float-end mt-4 ms-1" type="button">Liên hệ người
+                                    bán</button>
+                                <button class="button-outlineedit-xemsp float-end mt-4 ms-1" type="button">Yêu cầu
+                                    trả/Hoàn tiền</button>
+                                <button class="buttonedit-xemsp float-end mt-4 ms-1" id="receivedButton2"
+                                    type="button">Đã nhận hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--=========card 3============ -->
+                <div class="row mt-5 card p-3">
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <a href="/assets/view/TrangChu.html"><button class="buttonedit-xemsp" type="button">Xem sản
+                                    phẩm</button></a>
+                            <label for="" class="text-xemsp" id="status3">Đang giao hàng</label>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <img src="/assets/images/product-6.jpg" alt="" style="width: 200px;">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <h3><label for="" id="name3">Thức ăn khô cho chó mọi giống cân nặng khỏe mạnh vị
+                                                Gà & Gạo Lứt</label></h3>
+                                        <select>
+                                            <option value="Phân loại hàng">Phân loại hàng</option>
+                                            <option value="Thức ăn">Thức ăn</option>
+                                            <option value="Phụ kiện">Phụ kiện</option>
+                                            <option value="Thuốc">Thuốc</option>
+                                        </select>
+                                        <h5 class="mt-2">X<label for="soluong">2</label></h5>
+                                        <div class="card w-50 border border-success">
+                                            <span class="text-center ps-2 pe-2 text-success">Trả hàng miễn phí 15
+                                                ngày.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="price">
+                                    <span class="float-start text-secondary">
+                                        <label for="giatiengoc" class="text-decoration-line-through">500.000VND</label>
+                                    </span>
+                                    <h4><label for="giatien" class="ms-2">350.000VND</label></h4>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="col-sm-12">
+                                <h4 class="text-xemsp fw-bold float-end me-5">Tổng tiền: <label>700.000VND</label></h4>
+                            </div>
+                            <div class="col-sm-12">
+                                <button class="button-outlineedit-xemsp float-end mt-4 ms-1" type="button">Liên hệ người
+                                    bán</button>
+                                <button class="button-outlineedit-xemsp float-end mt-4 ms-1" type="button">Yêu cầu
+                                    trả/Hoàn tiền</button>
+                                <button class="buttonedit-xemsp float-end mt-4 ms-1" id="receivedButton3"
+                                    type="button">Đã nhận hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--=========card 4============ -->
+                <div class="row mt-5 card p-3">
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <a href="/assets/view/TrangChu.html"><button class="buttonedit-xemsp" type="button">Xem sản
+                                    phẩm</button></a>
+                            <label for="" class="text-xemsp" id="status4">Đang giao hàng</label>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <img src="/assets/images/product-4.jpg" alt="" style="width: 200px;">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <h3><label for="" id="name2">Thức ăn khô cho chó mọi giống cân nặng khỏe mạnh vị
+                                                Gà & Gạo Lứt</label></h3>
+                                        <select>
+                                            <option value="Phân loại hàng">Phân loại hàng</option>
+                                            <option value="Thức ăn">Thức ăn</option>
+                                            <option value="Phụ kiện">Phụ kiện</option>
+                                            <option value="Thuốc">Thuốc</option>
+                                        </select>
+                                        <h5 class="mt-2">X<label for="soluong">2</label></h5>
+                                        <div class="card w-50 border border-success">
+                                            <span class="text-center ps-2 pe-2 text-success">Trả hàng miễn phí 15
+                                                ngày.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="price">
+                                    <span class="float-start text-secondary">
+                                        <label for="giatiengoc" class="text-decoration-line-through">500.000VND</label>
+                                    </span>
+                                    <h4><label for="giatien" class="ms-2">350.000VND</label></h4>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="col-sm-12">
+                                <h4 class="text-xemsp fw-bold float-end me-5">Tổng tiền: <label>700.000VND</label></h4>
+                            </div>
+                            <div class="col-sm-12">
+                                <button class="button-outlineedit-xemsp float-end mt-4 ms-1" type="button">Liên hệ người
+                                    bán</button>
+                                <button class="button-outlineedit-xemsp float-end mt-4 ms-1" type="button">Yêu cầu
+                                    trả/Hoàn tiền</button>
+                                <button class="buttonedit-xemsp float-end mt-4 ms-1" id="receivedButton4"
+                                    type="button">Đã nhận hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--=========card 5============ -->
+                <div class="row mt-5 card p-3">
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <a href="/assets/view/TrangChu.html"><button class="buttonedit-xemsp" type="button">Xem sản
+                                    phẩm</button></a>
+                            <label for="" class="text-xemsp" id="status5">Đang giao hàng</label>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <img src="/assets/images/product-5.jpg" alt="" style="width: 200px;">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <h3><label for="" id="name2">Thức ăn khô cho chó mọi giống cân nặng khỏe mạnh vị
+                                                Gà & Gạo Lứt</label></h3>
+                                        <select>
+                                            <option value="Phân loại hàng">Phân loại hàng</option>
+                                            <option value="Thức ăn">Thức ăn</option>
+                                            <option value="Phụ kiện">Phụ kiện</option>
+                                            <option value="Thuốc">Thuốc</option>
+                                        </select>
+                                        <h5 class="mt-2">X<label for="soluong">2</label></h5>
+                                        <div class="card w-50 border border-success">
+                                            <span class="text-center ps-2 pe-2 text-success">Trả hàng miễn phí 15
+                                                ngày.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="price">
+                                    <span class="float-start text-secondary">
+                                        <label for="giatiengoc" class="text-decoration-line-through">500.000VND</label>
+                                    </span>
+                                    <h4><label for="giatien" class="ms-2">350.000VND</label></h4>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="col-sm-12">
+                                <h4 class="text-xemsp fw-bold float-end me-5">Tổng tiền: <label>700.000VND</label></h4>
+                            </div>
+                            <div class="col-sm-12">
+                                <button class="button-outlineedit-xemsp float-end mt-4 ms-1" type="button">Liên hệ người
+                                    bán</button>
+                                <button class="button-outlineedit-xemsp float-end mt-4 ms-1" type="button">Yêu cầu
+                                    trả/Hoàn tiền</button>
+                                <button class="buttonedit-xemsp float-end mt-4 ms-1" id="receivedButton5"
+                                    type="button">Đã nhận hàng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Hàm để lưu trạng thái vào localStorage
+        function saveStatusToLocalStorage(key, value) {
+            localStorage.setItem(key, value);
+        }
+
+        // Hàm để lấy trạng thái từ localStorage
+        function getStatusFromLocalStorage(key) {
+            return localStorage.getItem(key);
+        }
+
+        // Hàm để cập nhật trạng thái và văn bản nút
+        function updateStatus(buttonId, statusLabelId, key) {
+            const button = document.getElementById(buttonId);
+            const statusLabel = document.getElementById(statusLabelId);
+
+            // Cập nhật trạng thái
+            statusLabel.innerText = "Đã nhận hàng";
+            // Cập nhật văn bản nút
+            button.innerText = "Mua lại";
+
+            // Lưu trạng thái vào localStorage
+            saveStatusToLocalStorage(key, "Đã nhận hàng");
+        }
+
+        // Hàm để khôi phục trạng thái từ localStorage
+        function restoreStatus(buttonId, statusLabelId, key) {
+            const savedStatus = getStatusFromLocalStorage(key);
+            const button = document.getElementById(buttonId);
+            const statusLabel = document.getElementById(statusLabelId);
+
+            if (savedStatus === "Đã nhận hàng") {
+                statusLabel.innerText = "Đã nhận hàng";
+                button.innerText = "Mua lại";
+            }
+        }
+
+        // Thêm sự kiện click cho các nút "Đã nhận hàng"
+        document.getElementById('receivedButton1').addEventListener('click', function () {
+            updateStatus('receivedButton1', 'status1', 'status1');
+        });
+
+        document.getElementById('receivedButton2').addEventListener('click', function () {
+            updateStatus('receivedButton2', 'status2', 'status2');
+        });
+        document.getElementById('receivedButton3').addEventListener('click', function () {
+            updateStatus('receivedButton3', 'status3', 'status3');
+        });
+        document.getElementById('receivedButton4').addEventListener('click', function () {
+            updateStatus('receivedButton4', 'status4', 'status4');
+        });
+        document.getElementById('receivedButton5').addEventListener('click', function () {
+            updateStatus('receivedButton5', 'status5', 'status5');
+        });
+
+        // Khôi phục trạng thái khi trang được tải lại
+        restoreStatus('receivedButton1', 'status1', 'status1');
+        restoreStatus('receivedButton2', 'status2', 'status2');
+        restoreStatus('receivedButton3', 'status3', 'status3');
+        restoreStatus('receivedButton4', 'status4', 'status4');
+        restoreStatus('receivedButton5', 'status5', 'status5');
+    </script>
+    <!--JavaScript Libraries -->
+    <script src="/assets/js/reload.js"></script>
+    <script src="/assets/js/chart.js"></script>
+    <script src="/assets/js/page.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/script-profile.js"></script>
+    <!-- =================================== -->
+
+    <!-- <script src="script.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
